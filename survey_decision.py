@@ -15,10 +15,8 @@ def hello_world():
 	r=request.get_json()
 	customer_snake = request.json['user']['result_templates']
 	customer_email = request.json['user']['email']
-	#result_templates = request.json
-	#customer_budget = request.json['user']['budget']
-	#customer_area = request.json['user']['area']
 	print(r)
+	print(customer_snake)
 	#print(customer_snake[3:len(customer_snake-2)])
 	customer_email=list(customer_email)
 	customer_email.pop(0)
@@ -54,7 +52,7 @@ def hello_world():
 	s.starttls()
 	s.login(sender_email, "P@ssword0987")
 	text = msg.as_string()
-	s.sendmail(sender_email, "rajesh.marudhachalam@gmail.com", text)
+	s.sendmail(sender_email, "raghu.kapur2016@vitstudent.ac.in", text)
 	s.quit()
 
 	return (r)
@@ -121,4 +119,4 @@ We shall discuss further details with you over call shortly. We are eager to wor
 """
 
 if __name__ == '__main__':
-	app.run(host='localhost', port='3000',debug = True)
+	app.run(host='localhost', port='3001',debug = True)
